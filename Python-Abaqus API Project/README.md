@@ -23,6 +23,15 @@ https://github.com/hnrwagner/ABAQUS-Python-Script/blob/main/Script_3D_cylinder_0
 
 [2] https://www.youtube.com/watch?v=QRQLliaOpm4
 
+
+Project deployment, Please refer to https://github.com/JiaoranWang/Python-Abaqus.git
+The original .PDF of this file is here: https://jiaoranwang.github.io/home/Abaqus-Python%20API%20Operation%20Manual.html
+https://github.com/JiaoranWang/jiaoranwang.github.io/blob/master/home/pdf/Abaqus-Python%20API%20Operation%20Manual.pdf
+The abaqus modeling file mentioned is here: 
+(.ppt): 
+https://github.com/JiaoranWang/Python-Abaqus/blob/master/Python-Abaqus%20API%20Project/Pics/3%20abaqus%20tutorial.pdf
+(.mp4)
+Abaqus Simulation Tutorial
+![image](https://user-images.githubusercontent.com/65510682/168812990-2ccdcb04-cf6b-4753-adf5-34ab10ef9c61.png)
+
 ![image](https://github.com/JiaoranWang/pythonProject/blob/master/Python-Abaqus%20API%20Project/Pics/Front_Page.jpg)
-
-
