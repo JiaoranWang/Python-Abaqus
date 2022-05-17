@@ -1,5 +1,5 @@
-[intro]
-Hi~!!! This is a tutorial about how to using the Python-Abaqus API to automatically create/analysis
+**[intro]
+Hi~!!! This is a tutorial about how to using the Python-Abaqus API to automatically create/analysis**
 
 [Pycharm: how to soft wrap~]
 
@@ -32,10 +32,6 @@ The abaqus modeling file mentioned is here:
 https://github.com/JiaoranWang/Python-Abaqus/blob/master/Python-Abaqus%20API%20Project/Pics/3%20abaqus%20tutorial.pdf
 (.mp4)
 Abaqus Simulation Tutorial
-![image](https://user-images.githubusercontent.com/65510682/168812990-2ccdcb04-cf6b-4753-adf5-34ab10ef9c61.png)
-
-![image](https://github.com/JiaoranWang/pythonProject/blob/master/Python-Abaqus%20API%20Project/Pics/Front_Page.jpg)
-
 
 Project deployment, Please refer to https://github.com/JiaoranWang/Python-Abaqus.git
 The original .PDF of this file is here: https://jiaoranwang.github.io/home/Abaqus-Python%20API%20Operation%20Manual.html
@@ -44,20 +40,12 @@ The abaqus modeling file mentioned is here:
 (.ppt): 
 https://github.com/JiaoranWang/Python-Abaqus/blob/master/Python-Abaqus%20API%20Project/Pics/3%20abaqus%20tutorial.pdf
 (.mp4)
-Abaqus Simulation Tutorial
 
-
-
-
-
-
-1.intro
-
-
+**Abaqus Simulation Tutorial**
+**1.intro**
 
 Abaqus can automatically generate Python script files with the extension.rpy, it's automatically tracking all the oprations in the CAE inerface. When the task ends, the scripts are saved into .jnl, you can run the file to rebuild the model 
-	
-	
+
 The "abaqus.rpy" can be automatically updatedaccording to action (checked in notebook++ and Pycharm)
 By changing the parameters and process in it, we can obtain a new model with new job and analysis.
 
@@ -70,10 +58,7 @@ and 2) reference functions defined in the same file (CAE does not redirect to re
 2. Running Python scripts in Abaqus
 2.1 Function structure and specification
 
-For now, we have the following scripts:
-	Please see the following pic
-
-
+For now, we have the following scripts:Please see the following pic
 
 1.Environment
 1.1 Abaqus Environment: How do I automatically run scripts in Abaqus
@@ -87,21 +72,8 @@ The .lnk is the suffix for shortcut, to trace back to the original file, we can 
 (How do I find the normal location of the shortcut?
 https://m33.wiki/help/windows_shortcut_original_file_location.html)
 
-
-
-
-
 The original file is a CMD, so we can open it in Python and type input by feeding .bat file
 [Strongly suggestion] Since the .lnk could function well, we can put it directly into the folder where we calling it to avoid path changing (see the following pic)
-
-
-
-
-
-
-
-
-
 
 Enter the Command in the Abaqus Command window:
 ''
@@ -110,25 +82,10 @@ abaqus cae script=Exe_1.py
 ''
 I put them into a .bat file
 
-
-
-
-
-
 To directly put the path into abaqus cae script could not work:
 abaqus cae script=C:\Users\jiaor\PycharmProjects\pythonProject_HP\Python-Abaqus API Project\Python-Abaqus API\Exe_Scripts\Exe_1.py
 
 Execute Scripts
 
-
-
-
-
-
-
-
-
-
-[Abaqus]Change/settheworkdictionaryandresults
 ![image](https://user-images.githubusercontent.com/65510682/168813285-0302869d-12e3-4616-82c9-9a47bd2d999c.png)
 
