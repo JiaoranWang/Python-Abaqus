@@ -1,0 +1,75 @@
+# -*- coding: mbcs -*-
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.Model(name='Buckling_Analysis')
+mdb.models['Buckling_Analysis'].ConstrainedSketch(name='__profile__', 
+    sheetSize=200.0)
+mdb.models['Buckling_Analysis'].sketches['__profile__'].CircleByCenterPerimeter(
+    center=(0.0, 0.0), point1=(25.0, 0.0))
+mdb.models['Buckling_Analysis'].sketches['__profile__'].CircleByCenterPerimeter(
+    center=(0.0, 0.0), point1=(22.5, 0.0))
+mdb.models['Buckling_Analysis'].Part(dimensionality=THREE_D, name='Cylinder', 
+    type=DEFORMABLE_BODY)
+mdb.models['Buckling_Analysis'].parts['Cylinder'].BaseSolidExtrude(depth=526.0, 
+    sketch=mdb.models['Buckling_Analysis'].sketches['__profile__'])
+del mdb.models['Buckling_Analysis'].sketches['__profile__']
+mdb.models['Buckling_Analysis'].parts['Cylinder'].DatumPlaneByPrincipalPlane(
+    offset=0.0, principalPlane=XZPLANE)
+mdb.models['Buckling_Analysis'].parts['Cylinder'].DatumPlaneByPrincipalPlane(
+    offset=263.0, principalPlane=XYPLANE)
+mdb.models['Buckling_Analysis'].parts['Cylinder'].DatumPlaneByPrincipalPlane(
+    offset=0.0, principalPlane=YZPLANE)
+mdb.models['Buckling_Analysis'].parts['Cylinder'].DatumPlaneByPrincipalPlane(
+    offset=50.0, principalPlane=XZPLANE)
+mdb.models['Buckling_Analysis'].parts['Cylinder'].Set(cells=
+    mdb.models['Buckling_Analysis'].parts['Cylinder'].cells.getSequenceFromMask(
+    mask=('[#1 ]', ), ), name='Cylinder_3D')
+mdb.models['Buckling_Analysis'].parts['Cylinder'].Set(faces=(
+    mdb.models['Buckling_Analysis'].parts['Cylinder'].faces.getSequenceFromMask(
+    mask=('[#4 ]', ), ), ), name='Set-RP-2')
+mdb.models['Buckling_Analysis'].parts['Cylinder'].Set(faces=(
+    mdb.models['Buckling_Analysis'].parts['Cylinder'].faces.getSequenceFromMask(
+    mask=('[#8 ]', ), ), ), name='Set-RP-1')
+mdb.models['Buckling_Analysis'].parts['Cylinder'].Set(faces=(
+    mdb.models['Buckling_Analysis'].parts['Cylinder'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), ), ), name='Outer_Surface')
+mdb.models['Buckling_Analysis'].parts['Cylinder'].Surface(name='Outer_Surface', 
+    side1Faces=(
+    mdb.models['Buckling_Analysis'].parts['Cylinder'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), ), ))
+mdb.models['Buckling_Analysis'].parts['Cylinder'].Surface(name=
+    'Internal_Surface', side1Faces=(
+    mdb.models['Buckling_Analysis'].parts['Cylinder'].faces.getSequenceFromMask(
+    mask=('[#2 ]', ), ), ))
+mdb.models['Buckling_Analysis'].Material(name='CFRP')
+mdb.models['Buckling_Analysis'].materials['CFRP'].Elastic(table=((133000, 
+    11500, 11500, 0.32, 0.32, 0.37, 4800, 4800, 4200), ), type=
+    ENGINEERING_CONSTANTS)
+mdb.models['Buckling_Analysis'].materials['CFRP'].HashinDamageInitiation(table=
+    ((1200, 972, 37, 147, 71.5, 32), ))
+mdb.models['Buckling_Analysis'].rootAssembly.DatumCsysByDefault(CARTESIAN)
+mdb.models['Buckling_Analysis'].rootAssembly.Instance(dependent=ON, name=
+    'Cylinder-1', part=mdb.models['Buckling_Analysis'].parts['Cylinder'])
+mdb.models['Buckling_Analysis'].rootAssembly.ReferencePoint(point=(0.0, 0.0, 
+    0.0))
+mdb.models['Buckling_Analysis'].rootAssembly.Set(name='RP-1', referencePoints=(
+    mdb.models['Buckling_Analysis'].rootAssembly.referencePoints[4], ))
+mdb.models['Buckling_Analysis'].Equation(name='Constraint-RP-1', terms=((1.0, 
+    'Cylinder-1.Set-RP-1', 3), (-1.0, 'RP-1', 3)))
+mdb.models['Buckling_Analysis'].DisplacementBC(amplitude=UNSET, createStepName=
+    'Step-1', distributionType=UNIFORM, fieldName='', localCsys=None, name=
+    'Displacement_Load', region=
+    mdb.models['Buckling_Analysis'].rootAssembly.sets['RP-1'], u1=UNSET, u2=
+    UNSET, u3=20, ur1=UNSET, ur2=UNSET, ur3=UNSET)
+#* Unknown step type.
