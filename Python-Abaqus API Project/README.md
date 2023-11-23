@@ -41,6 +41,9 @@ The abaqus modeling file mentioned is here:
 https://github.com/JiaoranWang/Python-Abaqus/blob/master/Python-Abaqus%20API%20Project/Pics/3%20abaqus%20tutorial.pdf
 (.mp4)
 
+how-to video
+https://www.youtube.com/watch?v=IVKPvQbYPKM
+
 **Abaqus Simulation Tutorial**
 **1.intro**
 
