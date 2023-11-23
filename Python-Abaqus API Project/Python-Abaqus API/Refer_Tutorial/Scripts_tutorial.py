@@ -27,7 +27,7 @@ import os
 os.chdir(r"C:\Users\jiaor\Abaqus_workdict")
 
 # functions
-
+# @@@ Update testing
 
 def Create_Part_3D_Cylinder(radius, length, thickness, part, model):
     s1 = mdb.models[model].ConstrainedSketch(name='__profile__', sheetSize=200.0)
