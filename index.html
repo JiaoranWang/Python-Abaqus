@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh_CN" data-theme-mode="light" data-light-theme="daylight" data-dark-theme="midnight">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" type="text/css" id="baseStyle" href="stage/build/export/base.css?2.10.16"/>
+    <link rel="stylesheet" type="text/css" id="themeDefaultStyle" href="appearance/themes/daylight/theme.css?2.10.16"/>
+    
+    <title>D:\OneDrive - University of Southern California\2. Jiaoranw_len_2022 FALL STUDY\Research\220501_NEW IDEAS_May1st\Python-Abaqus API info+tutorial\How to set a task for Automating Unit Tests in Python - 思源笔记  v2.10.16</title>
+    <style>
+        body {font-family: var(--b3-font-family);background-color: var(--b3-theme-background);color: var(--b3-theme-on-background)}
+        .b3-typography, .protyle-wysiwyg, .protyle-title {font-size:16px !important}
+.b3-typography code:not(.hljs), .protyle-wysiwyg span[data-type~=code] { font-variant-ligatures: none }
+.li > .protyle-action {height:34px;line-height: 34px}
+.protyle-wysiwyg [data-node-id].li > .protyle-action ~ .h1, .protyle-wysiwyg [data-node-id].li > .protyle-action ~ .h2, .protyle-wysiwyg [data-node-id].li > .protyle-action ~ .h3, .protyle-wysiwyg [data-node-id].li > .protyle-action ~ .h4, .protyle-wysiwyg [data-node-id].li > .protyle-action ~ .h5, .protyle-wysiwyg [data-node-id].li > .protyle-action ~ .h6 {line-height:34px;}
+.protyle-wysiwyg [data-node-id].li > .protyle-action:after {height: 16px;width: 16px;margin:-8px 0 0 -8px}
+.protyle-wysiwyg [data-node-id].li > .protyle-action svg {height: 14px}
+.protyle-wysiwyg [data-node-id].li:before {height: calc(100% - 34px);top:34px}
+.protyle-wysiwyg [data-node-id] [spellcheck] {min-height:26px;}
+.protyle-wysiwyg [data-node-id] {}
+.protyle-wysiwyg .li {min-height:34px}
+.protyle-gutters button svg {height:26px}
+.protyle-wysiwyg img.emoji, .b3-typography img.emoji {width:18px}
+.protyle-wysiwyg .h1 img.emoji, .b3-typography h1 img.emoji {width:35px}
+.protyle-wysiwyg .h2 img.emoji, .b3-typography h2 img.emoji {width:31px}
+.protyle-wysiwyg .h3 img.emoji, .b3-typography h3 img.emoji {width:27px}
+.protyle-wysiwyg .h4 img.emoji, .b3-typography h4 img.emoji {width:25px}
+.protyle-wysiwyg .h5 img.emoji, .b3-typography h5 img.emoji {width:22px}
+.protyle-wysiwyg .h6 img.emoji, .b3-typography h6 img.emoji {width:20px}
+        
+        
+    </style>
+</head>
+<body>
+<div class="b3-typography" 
+style="max-width: 800px;margin: 0 auto;" 
+id="preview"><h1 id="20231123201455-y2dh5e0" updated="20231123201455">How to set a task for Automating Unit Tests in Python</h1>
+<p id="20231123201455-57du047" updated="20231123201455">For simply set up the automatic task (Running Python/C/MATLAB)We will need the following：</p>
+<p id="20231123201455-el5vvnz" updated="20231123201455"><span data-type="text" style="background-color: var(--b3-font-background1);">[Task Scheduler] =&gt; [.bat] =&gt; [Python Script]</span></p>
+<table id="20231123201455-fm7wd6c" updated="20231123201455">
+<thead>
+<tr>
+<th>Item</th>
+<th>Details</th>
+<th>More info.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>@1Prepare[Python script]</td>
+<td>An executable[Pythonscript]</td>
+<td>/</td>
+</tr>
+<tr>
+<td>@2[.bat]for[python scripts]</td>
+<td>@echo off &quot;Path where your Python exe is  stored\python.exe&quot; &quot;Path where your Python script is  stored\script_name.py&quot; pause   @echo off &quot;C:\Users\lenovo\AppData\Local\Programs\Python\Python39&quot; &quot;C:\Users\lenovo\PycharmProjects\pythonProject_HP\Python-Abaqus  API Project\Python-Abaqus API\Refer_Tutorial&quot; pause</td>
+<td>Steps to Create a  Batch File to Run a Python Script <a href="https://datatofish.com/batch-python-script/">https://datatofish.com/batch-python-script/</a></td>
+</tr>
+<tr>
+<td>@3 Task setting for[.bat]</td>
+<td>[Task Scheduler]: 'Create  New Task' =&gt; General  (task description)=&gt; Triggers  (time schedule)=&gt; Actions  (Where you put the .bat in) =&gt; Conditions  =&gt; Others</td>
+<td>From  &lt;<a href="https://www.windowscentral.com/how-create-automated-task-using-task-scheduler-windows-10">https://www.windowscentral.com/how-create-automated-task-using-task-scheduler-windows-10</a>&gt;</td>
+</tr>
+<tr>
+<td>@4 for[MATLAB]?</td>
+<td>Is there a way to use  a &quot;.bat&quot; file to call a MATLAB script from a MATLAB command line  without the bat file opening up a new MATLAB session?</td>
+<td><a href="https://www.mathworks.com/matlabcentral/answers/115020-is-there-a-way-to-use-a-bat-file-to-call-a-matlab-script-from-a-matlab-command-line-without-the-b">https://www.mathworks.com/matlabcentral/answers/115020-is-there-a-way-to-use-a-bat-file-to-call-a-matlab-script-from-a-matlab-command-line-without-the-b</a></td>
+</tr>
+</tbody>
+</table>
+<table id="20231123201455-53n6t2s" updated="20231123201455">
+<thead>
+<tr>
+<th>To find the right python.exe ​<span class="img"><img src="assets/image-20231123201031-ycpybis.png" alt="" /></span>   <span class="img"><img src="assets/image-20231123201031-xefhfcs.png" alt="" /></span>​</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[Task Scheduler]: 'Create New Task' =&gt;  General(task description)=&gt; Triggers(time schedule)=&gt;Actions(Where you  put the .bat in) =&gt; Conditions =&gt; Others</td>
+</tr>
+<tr>
+<td>​​<span class="img"><img src="assets/image-20231123201031-e25hesm.png" alt="" /></span>​   <span class="img"><img src="assets/image-20231123201031-eprfo0t.png" alt="" /></span>   <span class="img"><img src="assets/image-20231123201031-ia750ds.png" alt="" /></span>   <span class="img"><img src="assets/image-20231123201031-otarts6.png" alt="" /></span>   <span class="img"><img src="assets/image-20231123201031-iz2oj60.png" alt="" /></span>   <span class="img"><img src="assets/image-20231123201031-6fisbsx.png" alt="" /></span>​</td>
+</tr>
+</tbody>
+</table>
+<p id="20231123201455-zvcv7o5" updated="20231123201455">‍</p>
+</div>
+<script src="appearance/icons/material/icon.js?2.10.16"></script>
+<script src="stage/build/export/protyle-method.js?2.10.16"></script>
+<script src="stage/protyle/js/lute/lute.min.js?2.10.16"></script>    
+<script>
+    window.siyuan = {
+      config: {
+        appearance: { mode: 0, codeBlockThemeDark: "base16/dracula", codeBlockThemeLight: "github" },
+        editor: { 
+          codeLineWrap: true,
+          fontSize: 16,
+          codeLigatures: false,
+          plantUMLServePath: "https://www.plantuml.com/plantuml/svg/~1",
+          codeSyntaxHighlightLineNum: false,
+          katexMacros: JSON.stringify({}),
+        }
+      },
+      languages: {copy:"复制"}
+    };
+    const previewElement = document.getElementById('preview');
+    Protyle.highlightRender(previewElement, "stage/protyle");
+    Protyle.mathRender(previewElement, "stage/protyle", false);
+    Protyle.mermaidRender(previewElement, "stage/protyle");
+    Protyle.flowchartRender(previewElement, "stage/protyle");
+    Protyle.graphvizRender(previewElement, "stage/protyle");
+    Protyle.chartRender(previewElement, "stage/protyle");
+    Protyle.mindmapRender(previewElement, "stage/protyle");
+    Protyle.abcRender(previewElement, "stage/protyle");
+    Protyle.htmlRender(previewElement);
+    Protyle.plantumlRender(previewElement, "stage/protyle");
+    document.querySelectorAll(".protyle-action__copy").forEach((item) => {
+      item.addEventListener("click", (event) => {
+            let text = item.parentElement.nextElementSibling.textContent.trimEnd();
+            text = text.replace(/ /g, " "); // Replace non-breaking spaces with normal spaces when copying
+            navigator.clipboard.writeText(text);
+            event.preventDefault();
+            event.stopPropagation();
+      })
+    });
+</script></body></html>
