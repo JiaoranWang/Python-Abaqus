@@ -14,6 +14,7 @@ For simply set up the automatic task (Running Python/C/MATLAB)We will need the f
 | To find the right python.exe ​![](assets/image-20231123201031-ycpybis.png)   ![](assets/image-20231123201031-xefhfcs.png)​                                                                                                                                                               |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Task Scheduler]: 'Create New Task' =>  General(task description)=> Triggers(time schedule)=>Actions(Where you  put the .bat in) => Conditions => Others                                                                                                                                 |
-| ​​![](assets/image-20231123201031-e25hesm.png)​   ![](assets/image-20231123201031-eprfo0t.png)   ![](assets/image-20231123201031-ia750ds.png)   ![](https://github.com/JiaoranWang/Python-Abaqus/tree/master/Python-Abaqus%20API%20Project/Pics/image-20231123201031-otarts6.png)   ![](assets/image-20231123201031-iz2oj60.png)   ![](assets/image-20231123201031-6fisbsx.png)​ |
+| ​​![](assets/image-20231123201031-e25hesm.png)​   ![](assets/image-20231123201031-eprfo0t.png)   ![](assets/image-20231123201031-ia750ds.png)   ![](assets/image-20231123201031-otarts6.png)   ![](assets/image-20231123201031-iz2oj60.png)   ![](assets/image-20231123201031-6fisbsx.png)​ |
 
-‍
+![](‍[Python-Abaqus API Project]/Pics/Front_Page.jpg)
+
