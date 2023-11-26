@@ -29,7 +29,7 @@ print (os.path.abspath(os.path.join(os.getcwd(), "..")))
 print ('***获取上上级目录***')
 print (os.path.abspath(os.path.join(os.getcwd(), "../..")))
 
-# C:\Users\jiaor\PycharmProjects\pythonProject_HP\Python-Abaqus API Project\Python-Abaqus API\Exe_Scripts\Test
+# C:\Users\jiaor\PycharmProjects\pythonProject_HP\[Python-Abaqus API Project]\Python-Abaqus API\Exe_Scripts\Test
 
 # whether the path exists
 def mkdir(path):
