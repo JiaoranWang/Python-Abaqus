@@ -14,7 +14,7 @@ folder = os.path.abspath(os.path.join(os.getcwd(), ".."))+'\\Results\\'+'Test_'+
 # make and change the work to folder
 os.makedirs(folder)
 os.chdir(folder)
-# --------------------------#
+# -------------------------- #
 # python #abaqus #abaqustutorial #hnrwagner
 
 
