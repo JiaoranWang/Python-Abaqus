@@ -353,6 +353,7 @@ Create_Set_Vertice(0.0, myRadius, myLength / 2.0, myString, myPart, "SPLA_Point"
 Create_Composite_Layup(myString, myPart, "Cylinder_3D", "Quasi_Isotropic", myPlyNumber, "CFRP",
                        myThickness / myPlyNumber, myAngle)
 
+
 CreateCutout(myString, myPart, 7.5, myID_4, myEdge, 0.0, 0.0, myLength / 2.0)
 
 Create_Mesh(myString, myPart, Mesh_Size)

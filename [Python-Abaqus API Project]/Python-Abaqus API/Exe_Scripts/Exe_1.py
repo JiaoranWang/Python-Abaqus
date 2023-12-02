@@ -355,6 +355,7 @@ Create_Composite_Layup(myString, myPart, "Cylinder_3D", "Quasi_Isotropic", myPly
 
 CreateCutout(myString, myPart, 7.5, myID_4, myEdge, 0.0, 0.0, myLength / 2.0)
 
+
 Create_Mesh(myString, myPart, Mesh_Size)
 myFace = Create_Set_Face(myRadius, 0.0, myLength / 2.0, myString, myPart, "Outer_Surface")
 AssignStack(myString, myPart, myFace)
