@@ -1,6 +1,8 @@
 # What does [Python-Abaqus API Project] do?
 
- **[intro] Hi~!!! This is a tutorial about how to using the Python-Abaqus API to automatically create/analysis**
+#  **[Intro.] How to tutorial**
+
+> **Hi~!!! This is a tutorial about how to using the Python-Abaqus API to automatically create/analysis**
 
 [Pycharm: how to soft wrap~]
 
