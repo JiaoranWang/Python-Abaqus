@@ -1,4 +1,4 @@
-
+# Importings
 import os
 import sys
 from datetime import datetime
@@ -16,7 +16,6 @@ os.makedirs(folder)
 os.chdir(folder)
 # --------------------------#
 # python #abaqus #abaqustutorial #hnrwagner
-
 
 from abaqus import *
 from abaqusConstants import *
