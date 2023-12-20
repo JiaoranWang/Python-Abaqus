@@ -1,4 +1,4 @@
-'''###  Open Abaqus Command window then Run Python Script ###'''
+'''### Run Python Script ###'''
 
 '''
 @Tutorial Please refer to:
@@ -9,8 +9,34 @@ import subprocess
 import sys
 import time
 import os
+### Define main variables:
+
+var_1 = []
+
+var_2 = {
+    'var_2_1' :[1,2,3],
+    'var_2_2' :[1,2,3],
+}
+
+class Testing_1():
+    def def_1(self):
+        print('Hello_1')
+    def def_2(self):
+        print('Hello_2')
+        var = var_2['var_2_1'][0]
+        print(f'Hello_2 print{var}')
+
+class Testing_2():
+    def __init__(self):
+        self.def_x = Testing_1()
+    def def_3(self):
+        self.def_x.def_2()
+
+
+
 
 class Run_script_Processing_odbFile():
+    ####
     def Run_script(self):
         get_input = input("Please input: Start the CAE with scripts? Y/N: ")
         if get_input.strip().upper() == "Y":
@@ -67,7 +93,8 @@ class Run_script_Processing_odbFile():
             # folder = os.path.abspath(os.path.join(os.getcwd(), "..")) + '\\Results\\' + 'Test_' + time + '_' + name
         ######## Open my odb file
 
-        myOdb = openOdb(path='pathfile')
+        # myOdb = openOdb(path='pathfile')
 
-def __init__(self):
-    self.Run_script()
+if __name__ == "__main__":
+    # Run_script_Processing_odbFile().Run_script()
+    Testing_2().def_3()
