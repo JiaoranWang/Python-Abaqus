@@ -246,6 +246,12 @@ def CreateCutout(model, part, radius_cutout, id_plane, edge, x, y, z):
 
 
 def AssignStack(model, part, face):
+    """
+    :param model:
+    :param part:
+    :param face:
+    :return:
+    """
     p = mdb.models[model].parts[part]
     c = p.cells[:]
     p.assignStackDirection(referenceRegion=face, cells=c)

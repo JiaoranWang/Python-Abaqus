@@ -9,35 +9,44 @@ import subprocess
 import sys
 import time
 import os
+
 ### Define main variables:
 
 var_1 = []
 
 var_2 = {
-    'var_2_1' :[1,2,3],
-    'var_2_2' :[1,2,3],
+    'var_2_1': [1, 2, 3],
+    'var_2_2': [1, 2, 3],
 }
+
 
 class Testing_1():
     def def_1(self):
         print('Hello_1')
+
     def def_2(self):
         print('Hello_2')
         var = var_2['var_2_1'][0]
+        #### if var can be not existing, set 'None'
+        var_4 = var_2.get('var_2_1', None)
+        print(var_4)
         print(f'Hello_2 print{var}')
+
 
 class Testing_2():
     def __init__(self):
         self.def_x = Testing_1()
+
     def def_3(self):
         self.def_x.def_2()
-
-
 
 
 class Run_script_Processing_odbFile():
     ####
     def Run_script(self):
+        """
+        :return:
+        """
         get_input = input("Please input: Start the CAE with scripts? Y/N: ")
         if get_input.strip().upper() == "Y":
             ## Please also set which execute script you want to run(e.g. (default) Exe_1.py)
@@ -75,6 +84,10 @@ class Run_script_Processing_odbFile():
                                  stdout=subprocess.PIPE)  # do not need to be trouble go directly to run.bat
 
     def Processing_odbFile(self):
+        """
+
+        :return:
+        """
         folder = os.path.abspath(os.path.join(os.getcwd(), "..")) + '\\Results\\'
         os.chdir(folder)
         ####### in Specific folder, find .odb file
@@ -94,6 +107,7 @@ class Run_script_Processing_odbFile():
         ######## Open my odb file
 
         # myOdb = openOdb(path='pathfile')
+
 
 if __name__ == "__main__":
     # Run_script_Processing_odbFile().Run_script()
