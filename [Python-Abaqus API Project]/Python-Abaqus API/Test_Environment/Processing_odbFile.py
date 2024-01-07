@@ -6,11 +6,13 @@ https://www.bilibili.com/read/cv22522234/?spm_id_from=333.999.0.0
 @Introduction:
 This Processing_odbFile.py is providing basic commands for running.odb results
 using python
+****@API Tutorial Please refer to:[Setion 3.2]
+http://130.149.89.49:2080/v6.14/books/cmd/default.htm?startat=pt01ch01.html
 '''
 
 # from odbAccess import *
 import os
-# from odbAccess import openOdb
+from odbAccess import openOdb
 # from textRepr import *
 
 ####### find .odb file
@@ -37,19 +39,22 @@ for i, j, k in os.walk(os.getcwd() + '\\' + which_ODBfile):
     # folder = os.path.abspath(os.path.join(os.getcwd(), "..")) + '\\Results\\' + 'Test_' + time + '_' + name
 ######## Open my odb file
 myOdb = openOdb(file_path)
+## the path canbe myOdb = openOdb(r'C:\Users\jiaor\Abaqus_workdict\CFRP_Tube_1.odb')
 ### The following you can use in Abaqus prompt to see the data structure:
-dir(odb)
+## To save the output:
+
+dir(myOdb)
 # OK let's have a look inside jobData
-print(odb.jobData)
-print(odb.diagnosticData)
-print(odb.diagnosticData.jobStatus)
+print(myOdb.jobData)
+print(myOdb.diagnosticData)
+print(myOdb.diagnosticData.jobStatus)
 # Now we know that the simulation was successful Let's now have a look to history outputs
-print(odb.steps)
-print(odb.steps['LOADING'])
-print(odb.steps['LOADING'].frames[-1])
-print(odb.steps['LOADING'].historyRegions['Assembly ASSEMBLY'])
+print(myOdb.steps)
+print(myOdb.steps['LOADING'])
+print(myOdb.steps['LOADING'].frames[-1])
+print(myOdb.steps['LOADING'].historyRegions['Assembly ASSEMBLY'])
 # And then to field outputs
-print(odb.steps['LOADING'].frames[-1].fieldOutputs['U'].values[0])
+print(myOdb.steps['LOADING'].frames[-1].fieldOutputs['U'].values[0])
 # ({'baseElementType': '', 'conjugateData': None, 'conjugateDataDouble': 'unknown', 'data': array([-2.51322398980847
 
 # Example_1
