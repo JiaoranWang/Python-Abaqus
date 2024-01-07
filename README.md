@@ -3,7 +3,7 @@
 ​​
 
 |Contents|Name|
-| ----------| -------------------------|
+| --------| -----------------------|
 |1|What does   **[Python-Abaqus API Project]**  do?|
 |2|How to set a task for  **Automating Unit Tests in Python**|
 |3|References|
@@ -23,7 +23,7 @@
 # [Python-Abaqus API Project] Code Operation Manual
 
 |Contents||
-| ---------------------------------------| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| -------------------------------------| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |1.Introduction|@1.1 How  does the abaqus built a model? [.rpy => .jnl] <br />@1.2 things  to remember while writing the .py file <br />@1.3 How to  create a model(Manually) in Abaqus<br />|
 |2.Environment|@2.1  Abaqus Environment:Howto  find the 'Abaqus Command' window to execute the .rpy scripts <br />@2.2 EASY!  Just put 'Abaqus Command' in your execute folder<br />|
 |3. Running  Python scripts in Abaqus|@3.1 Function structure and specification <br />@3.2  Execute:Open [Abaqus Comman.lnk] and run the .py  script <br />@3.3  Results: Storage <br />@3.4  Updates! How to  select different execute scripts .py without re-write the runcae.bat?<br />|
@@ -40,7 +40,9 @@ You can download the original .PDF of this file here:
 
 ### 1.1 How does the abaqus built a model? [.rpy => .jnl]
 
-Abaqus can automatically generate Python script files with the extension.rpy, it's automatically tracking all the oprations in the CAE inerface. When the task ends, the scripts are saved into .jnl, you can run the file to rebuild the model
+Abaqus can automatically generate Python script files with the extension.rpy, it's automatically tracking all the
+oprations in the CAE inerface. When the task ends, the scripts are saved into .jnl, you can run the file to rebuild the
+model
 
 ‍
 
@@ -60,7 +62,8 @@ To be noticed that CAE can only run the plain python scripts in its run shell, w
 
 * Python scripts that have judgment statements (because prespace changes are not recognized)
 
-* and 2) reference functions defined in the same file (CAE does not redirect to relative pathlookup) are not allowed to be imported into CAE to run
+* and 2) reference functions defined in the same file (CAE does not redirect to relative pathlookup) are not allowed to
+  be imported into CAE to run
 
 * => 3) Any references, function definitions and variable inputs need to be in the same script
 
@@ -85,11 +88,13 @@ Firstly we need to check where the 'Abaqus Command' window are.
 |​![](assets/image-20231203001927-52ipv4w.png)​|C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Dassault  Systemes SIMULIA Established Products 2021|
 | ------------------------------------------------| ---------------------------------------------------------------------------------------------------------|
 
-My path is in C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Dassault Systemes SIMULIA Established Products 2021 =>  "Abaqus Command.lnk"
+My path is in C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Dassault Systemes SIMULIA Established Products 2021
+=>  "Abaqus Command.lnk"
 
- To remember, you need to find the original `"Abaqus Command.lnk" 's location`​
+To remember, you need to find the original `"Abaqus Command.lnk" 's location`​
 
-The .lnk is the suffix for shortcut, to trace back to the original file, we can right click, then click on the `'Open file location'`​
+The .lnk is the suffix for shortcut, to trace back to the original file, we can right click, then click on
+the `'Open file location'`​
 
 > (How do I find the normal location of the shortcut?
 >
@@ -118,7 +123,8 @@ For now, we have the following scripts:
 
 ### 3.2 Execute: Open [Abaqus Comman.lnk] and run the .py script
 
-​![Open [Abaqus Comman.lnk] and run the .py script](assets/Open [Abaqus Comman.lnk] and run the .py script-20231203002238-zg4c0yl.png)​
+​![Open [Abaqus Comman.lnk] and run the .py script](assets/Open%20[Abaqus%20Comman.lnk]%20and%20run%20the%20.py%20script-20231203002238-zg4c0yl.png)
+​
 
 ​![](assets/image-20231203002238-ou9yzlb.png)​
 
@@ -140,7 +146,8 @@ I put them into a .bat file
 
 To directly put the path into abaqus cae script **could not work**:
 
-abaqus cae script=C:\Users\jiaor\PycharmProjects\pythonProject_HP\Python-Abaqus API Project\Python-Abaqus API\Exe_Scripts\Exe_1.py
+abaqus cae script=C:\Users\jiaor\PycharmProjects\pythonProject_HP\Python-Abaqus API Project\Python-Abaqus
+API\Exe_Scripts\Exe_1.py
 
 Execute Scripts
 
@@ -150,17 +157,19 @@ Execute Scripts
 
 ​![](assets/image-20231203002356-74i93be.png)​
 
- Finally, if you already setup the environment, simply click  TestEnv.py :
+Finally, if you already setup the environment, simply click TestEnv.py :
 
 ​![](assets/image-20231203002356-ovn1xff.png)​
 
 ​![](assets/image-20231203002356-5i85m0t.png)​
 
-An easy way to set up the environment and run the script is to put everything under the same folder, so the .py can find each other without setting.
+An easy way to set up the environment and run the script is to put everything under the same folder, so the .py can find
+each other without setting.
 
 ### 3.4 Updates! How to select different execute scripts .py without re-write the runcae.bat?
 
-If I want to change execute scripts 'name in the runcae.bat, or I have multiple scripts to run. How can I feed the variables to alter the .bat file?
+If I want to change execute scripts 'name in the runcae.bat, or I have multiple scripts to run. How can I feed the
+variables to alter the .bat file?
 
 > Codes:
 >
@@ -200,7 +209,8 @@ From <[https://stackoverflow.com/questions/66453290/make-changes-to-a-bat-file-u
 
 ## 4.Trimming your modeling scripts .py
 
-When I running the scripts and it opens the Abaqus with the following error, which means the scripts can not build the corresponding modeling parts
+When I running the scripts and it opens the Abaqus with the following error, which means the scripts can not build the
+corresponding modeling parts
 
 ​![](assets/image-20231203002357-3p7zh38.png)​
 
@@ -235,31 +245,52 @@ From the following pictures, we can see there's two result we need to
 Description of common ABAQUS file formats
 
 |Abaqus  modeling data|​![](assets/image-20231203122621-i5jwi0d.png)​|
-| -----------------------| -------------------------------------------------|
+| ---------------------| ------------------------------------------------|
 
 * 1.. cae file
-* A cae file is a model file generated by ABAQUS/CAE and can only be opened by ABAQUS/CAE. It contains a series of data such as model geometry, material properties, load conditions, boundary conditions, mesh division, etc.
+* A cae file is a model file generated by ABAQUS/CAE and can only be opened by ABAQUS/CAE. It contains a series of data
+  such as model geometry, material properties, load conditions, boundary conditions, mesh division, etc.
 * 2.. inp file
-* inp is ABAQUS's computational input file, also known as a task file, which can be opened with a text editing tool such as Notepad, Wordpad, or Editplus. It contains all the information needed for the calculation and can be generated by ABAQUS/CAE or written directly by the user.
+* inp is ABAQUS's computational input file, also known as a task file, which can be opened with a text editing tool such
+  as Notepad, Wordpad, or Editplus. It contains all the information needed for the calculation and can be generated by
+  ABAQUS/CAE or written directly by the user.
 * 3.. odb file
 * odb is the calculation result database file of ABAQUS. Can be opened by ABAQUS/CAE or ABAQUS/Viewer.
 * 4.. rpy file
-* During ABAQUS/CAE modeling, ABAQUS automatically generates the ABaqus.rpy file, which contains the commands in the CAE modeling process. If an rpy file already exists in a directory, ABAQUS automatically adds a numeric suffix, such as abaqus.rpy.1, abaqu.rpy.2, and so on.
+* During ABAQUS/CAE modeling, ABAQUS automatically generates the ABaqus.rpy file, which contains the commands in the CAE
+  modeling process. If an rpy file already exists in a directory, ABAQUS automatically adds a numeric suffix, such as
+  abaqus.rpy.1, abaqu.rpy.2, and so on.
 * 5.. log file
 
-  * The Log file is an ABAQUS log file that contains the start time and end time of each module. It can be opened with a text editing tool such as Notepad, Wordpad, or Editplus.
+    * The Log file is an ABAQUS log file that contains the start time and end time of each module. It can be opened with
+      a text editing tool such as Notepad, Wordpad, or Editplus.
 * 6.. dat file
-* The dat file usually contains check information about the model data, such as whether there is overlap in the boundary condition Settings, whether the grid quality meets the requirements, the calculation scale of the problem, the memory size of the call, and so on. In addition, the user can also output the calculation results to the dat file. dat files can be opened with text editing tools such as Notepad, Wordpad, or Editplus.
+* The dat file usually contains check information about the model data, such as whether there is overlap in the boundary
+  condition Settings, whether the grid quality meets the requirements, the calculation scale of the problem, the memory
+  size of the call, and so on. In addition, the user can also output the calculation results to the dat file. dat files
+  can be opened with text editing tools such as Notepad, Wordpad, or Editplus.
 * 7.. msg file
-* The msg file contains very useful information in the calculation process, such as the nonlinear computation convergence standard of each analysis step, the step length of each incremental step, the number of iterations, the iteration process, etc. Through the msg file, users can understand the factors that do not converge in the operation and make corresponding adjustments. The file can be opened with a text editing tool such as Notepad, Wordpad, or Editplus.
+* The msg file contains very useful information in the calculation process, such as the nonlinear computation
+  convergence standard of each analysis step, the step length of each incremental step, the number of iterations, the
+  iteration process, etc. Through the msg file, users can understand the factors that do not converge in the operation
+  and make corresponding adjustments. The file can be opened with a text editing tool such as Notepad, Wordpad, or
+  Editplus.
 * 8.. sta file
-* sta files are status files that can be opened with text editing tools such as Notepad, Wordpad, or Editplus. The file contains the summary information of each incremental step, such as the current analysis step, the current incremental step, the current incremental step size, and the number of iterations. Open the file during the calculation to see the progress of the calculation.
+* sta files are status files that can be opened with text editing tools such as Notepad, Wordpad, or Editplus. The file
+  contains the summary information of each incremental step, such as the current analysis step, the current incremental
+  step, the current incremental step size, and the number of iterations. Open the file during the calculation to see the
+  progress of the calculation.
 * 9.. stt file
-* stt files are temporary files automatically generated by ABAQUS, and ABAQUS reads and writes them. After the calculation is complete, the stt file will automatically disappear if no restart output is specified in the calculation.
+* stt files are temporary files automatically generated by ABAQUS, and ABAQUS reads and writes them. After the
+  calculation is complete, the stt file will automatically disappear if no restart output is specified in the
+  calculation.
 * 10.. res file
 * res is a restart file that contains the model information necessary for a restart.
 * 11.. lck file
-* The Ick file exists to avoid simultaneous writes to the resulting database file. The file disappears automatically when the calculation ends or the resulting database file is closed. Generally speaking, the user does not need to pay attention, but when the calculation is terminated abnormally due to unexpected factors such as power outage, if you need to re-submit the calculation, you need to manually delete the file.
+* The Ick file exists to avoid simultaneous writes to the resulting database file. The file disappears automatically
+  when the calculation ends or the resulting database file is closed. Generally speaking, the user does not need to pay
+  attention, but when the calculation is terminated abnormally due to unexpected factors such as power outage, if you
+  need to re-submit the calculation, you need to manually delete the file.
 
 ### 5.2 how to export the analysis data through Python?
 
@@ -273,9 +304,48 @@ Please refer to this:
 
 From <[https://stackoverflow.com/questions/28736692/how-to-store-a-zip-file-in-sql-server-table](https://stackoverflow.com/questions/28736692/how-to-store-a-zip-file-in-sql-server-table)>
 
+‍
+
+#### 5.2.1 .odb post-processing using Python
+
+Please see the following links for help:
+
+|Abaqus Python for post-processing Cheat Sheet(DRAFT)
+From  <[https://cheatography.com/louislec/cheat-sheets/abaqus-python-for-post-processing/](https://cheatography.com/louislec/cheat-sheets/abaqus-python-for-post-processing/)>||
+| --------------------------------------------------------------------------| -| |ABAQUS scripting with Python for post
+processing From  <[https://www.youtube.com/watch?v=VduVMKLuJiM](https://www.youtube.com/watch?v=VduVMKLuJiM)>||
+|ABAQUS-Python Scripting 101 - Save ODB Result Data to Image File
+From  <[https://www.youtube.com/watch?v=RQcDZl3x8X0](https://www.youtube.com/watch?v=RQcDZl3x8X0)>||
+|Abaqus Python Scripting: Extracting History Output
+From  <[https://www.youtube.com/watch?v=aNQp_ahBGG8](https://www.youtube.com/watch?v=aNQp_ahBGG8)>||
+
+Must see those following examples
+
+|1|Introduction Indentationtesting is used widely as an example in this tutorial but everything can be transposed easily
+to any other problem. Let’s start with an existing   
+axisymmetric conical indentation simulations defined in the following INP
+file:[indentation_axi.inp](https://abapy.readthedocs.io/en/latest/_downloads/indentation_axi1.inp). The model includes
+following features:* Axisymmetric solids.* Conical rigid indenter.* Von Mises elastic-plastic sample.* Frictionless
+contact.* Non linear geometry effects.The simulation can be launched directly using the command-line:
+|[https://abapy.readthedocs.io/en/latest/tutorial.html](https://abapy.readthedocs.io/en/latest/tutorial.html)   [indentation_axi.inp](https://abapy.readthedocs.io/en/latest/_downloads/indentation_axi1.inp)
+.   [https://abapy.readthedocs.io/en/latest/_downloads/indentation_axi1.inp](https://abapy.readthedocs.io/en/latest/_downloads/indentation_axi1.inp)|
+| -|
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+--------| |2|python handling Abaqus ODB files (Learn in 10 minutes)
+|[https://www.bilibili.com/video/BV1tX4y1Z7YL/?spm_id_from=333.999.0.0](https://www.bilibili.com/video/BV1tX4y1Z7YL/?spm_id_from=333.999.0.0)|
+|3|The Python script extracts the node data specified in the Abaqus ODB file Pythonextracts the Abaqus post-processing
+node collection data and generates a text
+file|[https://www.bilibili.com/read/cv22522234/?spm_id_from=333.999.0.0](https://www.bilibili.com/read/cv22522234/?spm_id_from=333.999.0.0)|
+|4|Post Processing Finite Element Modeling post processing
+tools.|From  <[https://abapy.readthedocs.io/en/latest/postproc.html](https://abapy.readthedocs.io/en/latest/postproc.html)>|
+
+‍
+
+‍
+
 # How to set a task for Automating Unit Tests in Python
 
->> For simply set up the automatic task (Running Python/C/MATLAB)We will need the following：
+> > For simply set up the automatic task (Running Python/C/MATLAB)We will need the following：
 >>
 >
 > [Task Scheduler] =&gt; [.bat] =&gt; [Python Script]
@@ -283,8 +353,8 @@ From <[https://stackoverflow.com/questions/28736692/how-to-store-a-zip-file-in-s
 > |Item|Details|More info.|
 > | ---------------------------| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| -----------------------------------------------------|
 > |@1Prepare[Python script]|An executable[Pythonscript]|/|
-> |@2[.bat]for[python scripts]|@echo off "Path where your Python exe is  stored\python.exe" "Path where your Python script is  stored\script_name.py" pause   @echo off "C:\Users\lenovo\AppData\Local\Programs\Python\Python39" "C:\Users\lenovo\PycharmProjects\pythonProject_HP\Python-Abaqus  API Project\Python-Abaqus API\Refer_Tutorial" pause|Steps to Create a  Batch File to Run a Python Script [https://datatofish.com/batch-python-script/](https://datatofish.com/batch-python-script/)|
-> |@3 Task setting for[.bat]|[Task Scheduler]: 'Create  New Task' => General  (task description)=> Triggers  (time schedule)=> Actions  (Where you put the .bat in) => Conditions  => Others|From  <[https://www.windowscentral.com/how-create-automated-task-using-task-scheduler-windows-10](https://www.windowscentral.com/how-create-automated-task-using-task-scheduler-windows-10)>|
+> |@2[.bat]for[python scripts]|@echo off "Path where your Python exe is  stored\python.exe" "Path where your Python script is  stored\script_name.py" pause @echo off "C:\Users\lenovo\AppData\Local\Programs\Python\Python39" "C:\Users\lenovo\PycharmProjects\pythonProject_HP\Python-Abaqus  API Project\Python-Abaqus API\Refer_Tutorial" pause|Steps to Create a  Batch File to Run a Python Script [https://datatofish.com/batch-python-script/](https://datatofish.com/batch-python-script/)|
+> |@3 Task setting for[.bat]|[Task Scheduler]: 'Create  New Task' => General  (task description)=> Triggers  (time schedule)=> Actions  (Where you put the .bat in) => Conditions => Others|From  <[https://www.windowscentral.com/how-create-automated-task-using-task-scheduler-windows-10](https://www.windowscentral.com/how-create-automated-task-using-task-scheduler-windows-10)>|
 > |@4 for[MATLAB]?|Is there a way to use  a ".bat" file to call a MATLAB script from a MATLAB command line  without the bat file opening up a new MATLAB session?|[https://www.mathworks.com/matlabcentral/answers/115020-is-there-a-way-to-use-a-bat-file-to-call-a-matlab-script-from-a-matlab-command-line-without-the-b](https://www.mathworks.com/matlabcentral/answers/115020-is-there-a-way-to-use-a-bat-file-to-call-a-matlab-script-from-a-matlab-command-line-without-the-b)|
 >
 > |To find the right python.exe ​![](assets/image-20231123201031-ycpybis.png)   ![](assets/image-20231123201031-xefhfcs.png)​|
